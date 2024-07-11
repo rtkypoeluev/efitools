@@ -1,0 +1,25 @@
+Source: efitools
+Section: admin
+Priority: optional
+Maintainer: unknown <rtkwlf@arcticwolf.com>
+Build-Depends: debhelper (>=9),
+    autotools-dev,
+    libfile-slurp-perl,
+    help2man,
+    libssl-dev,
+    openssl,
+    gnu-efi,
+    sbsigntool
+Standards-Version: 4.4.1
+Homepage: http://blog.hansenpartnership.com/uefi-secure-boot/
+#Vcs-Git: https://salsa.debian.org/efi-team/efitools.git
+#Vcs-Browser: https://salsa.debian.org/efi-team/efitools
+
+Package: efitools
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, sbsigntool
+Description: Tools to manipulate EFI secure boot keys and signatures
+ This package installs a variety of tools for manipulating keys and binary
+ signatures on UEFI secure boot platforms.
+ The tools provide access to the keys and certificates stored in the
+ secure variables of the UEFI firmware, usually in the NVRAM area.
